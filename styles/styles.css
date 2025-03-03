@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: prehistoric;
+    src: url(./Prehistoric.ttf);
+}
+
+body {
+    background: url(../assets/selva2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+body,
+input,
+button {
+    font-size: ;
+    font-family: prehistoric;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*páxina principal*/
+.main1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url(../assets/mar3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2%;
+
+
+}
+
+.logotexto {
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-color: rgba(159, 86, 40, 0.744);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border-bottom: 10px ridge rgb(159, 86, 40);
+
+}
+
+.textoinicio {
+    display: flex;
+    align-items: center;
+    padding: 4%;
+
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(135, 210, 30);
+    text-shadow: 0px 0px 10px black;
+    padding-bottom: 10%;
+
+}
+
+.logo2 {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo2 img {
+    width: 75%
+}
+
+.mapa {
+
+
+
+    height: 100%;
+}
+
+.mapa img {
+    width: 100%;
+}
+
+/*fichas*/
+.logo {
+    height: 17vh;
+
+}
+
+
+
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2%;
+    background-image: url(../assets/selva2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.ficha {
+    width: 90%;
+    max-width: 630px;
+    height: 90%;
+
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    height: 80%;
+    margin-bottom: 3%;
+    padding: 5px;
+    border-bottom: 10px ridge;
+}
+
+.datos {
+
+    width: 100%;
+    height: 30%;
+    display: grid;
+    grid-template-areas: "nombre nombre nombre"
+        "cifras descripcion descripcion";
+
+
+    gap: 20px;
+    padding: 10px;
+}
+
+.nombre {
+    grid-area: nombre;
+    text-align: center;
+}
+
+.cifras {
+    grid-area: cifras;
+}
+
+.descripcion {
+    grid-area: descripcion;
+    text-align: justify;
+}
+
+
+
+.carnivoro {
+    background-color: rgba(207, 88, 40, 0.611);
+    color: rgb(242, 255, 0);
+    text-shadow: 0px 0px 10px black;
+    border: 1px solid rgb(207, 87, 40);
+    border-bottom: 10px ridge rgba(207, 88, 40, 0.611);
+
+}
+
+.herviboro {
+    background-color: rgba(0, 255, 115, 0.347);
+    color: rgb(0, 251, 255);
+    text-shadow: 0px 0px 10px black;
+    border: 1px solid rgba(0, 255, 115, 0.347);
+    border-bottom: 10px ridge rgba(0, 255, 115, 0.347);
+}
+.piscivoro{
+    background-color: rgba(40, 132, 207, 0.611);
+    color: rgb(106, 255, 0);
+    text-shadow: 0px 0px 10px black;
+    border: 1px solid  rgba(40, 132, 207, 0.611);
+    border-bottom: 10px ridge  rgba(40, 132, 207, 0.611);
+}
+
+.imaxe {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+}
+
+.imaxe img {
+
+
+    max-height: 100%;
+    max-width: 100%;
+
+
+}
+
+.cortinilla {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    animation: cortina 5s linear 1;
+    animation-fill-mode: forwards
+}
+
+.explorer {
+    width: 50%;
+    position: absolute;
+    z-index: +20;
+    animation: ford 5s linear 1;
+    animation-fill-mode: forwards
+}
+
+.explorer img {
+    width: 100%
+}
+
+.explorer2 {
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    display: none;
+}
+
+.explorer2 img {
+    width: 100%;
+}
+
+.explorer3 {
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    display: none;
+}
+
+.explorer3 img {
+    width: 100%;
+}
+
+@keyframes cortina {
+    0% {
+        opacity: 100%;
+    }
+
+    90% {
+        opacity: 0%;
+        scale: 1
+    }
+
+    100% {
+        scale: 0;
+        opacity: 0%;
+    }
+}
+
+@keyframes ford {
+    0% {
+        left: 100%;
+        bottom: 20%
+    }
+
+    100% {
+        left: -50%;
+        bottom: 20%;
+    }
+
+}
+
+@keyframes ford2 {
+    0% {
+        bottom: 10%;
+        left: 50%;
+        opacity: 100%;
+
+    }
+
+    49%{
+        opacity: 100%;
+    }
+
+    50% {
+        bottom: 50%;
+        left: 10%;
+        opacity: 0%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 50vw;
+        opacity: 0%;
+
+    }
+
+}
+@keyframes ford3 {
+    0% {
+        bottom: 10%;
+        left: 50%;
+        opacity: 0%;
+
+    }
+
+    49%{
+        opacity: 0%;
+    }
+
+    50% {
+        bottom: 50%;
+        left: 10%;
+        opacity: 100%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 50vw;
+        opacity: 100%;
+
+    }
+
+}
+@media (max-width:900px) {
+    body {
+        overflow: visible;
+        height: 100%;
+    }
+
+    .main1 {
+        height: 100%;
+    }
+
+    .contedor {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    .main2 {
+        height: 100vh;
+    }
+
+    .explorer {
+        display: none
+    }
+
+    .explorer2 {
+        display: block;
+        width: 40%;
+
+        animation: ford2 5s linear 1;
+        animation-fill-mode: forwards
+    }
+
+    .explorer3 {
+        display: block;
+        width: 40%;
+
+        animation: ford3 5s linear 1;
+        animation-fill-mode: forwards
+    }
+
+}
+
+@media(max-width:748px) {
+    .logo {
+        height: 10vh;
+
+    }
+
+    .ficha {
+        width: 90%;
+        max-width: 630px;
+        height: 100%;
+    }
+
+    .datos {
+        height: 40%;
+    }
+
+    .imaxe {
+        height: 60%;
+    }
+    .logo2 {
+
+        width: 90%;
+        
+    }
+    .logotexto {
+        height: 400px;
+        width: 400px;
+       
+    
+    }
+    body{
+        background: url(../assets/junglamovil2.jpg);
+    }
+    .main2 {
+     
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        gap: 5vh;
+        padding-top: 5vh;
+       
+      
+     
+        background-image: url(../assets/junglamovil2.jpg);
+        
+       
+    }
+}
+@media(max-width:380px){
+    body,
+input,
+button {
+    font-size: 12px;
+    font-family: prehistoric;
+}
+    
+}
